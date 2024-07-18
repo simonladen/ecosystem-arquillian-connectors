@@ -68,7 +68,7 @@
     </parent>
 
     <artifactId>arquillian-payara-micro-managed</artifactId>
-    <name>Arquillian Container Payara Micro</name>
+    <name>Arquillian Container Payara Micro Managed</name>
 
     <description>
         Payara Managed Container integration for the Arquillian Project.
