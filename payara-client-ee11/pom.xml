@@ -44,7 +44,7 @@
 
     <groupId>fish.payara.arquillian</groupId>
     <artifactId>payara-client-ee11</artifactId>
-    <version>4.0.alpha1</version>
+    <version>4.0.alpha2-SNAPSHOT</version>
     <name>Payara EE 11 client libs</name>
     
     <description>
@@ -176,6 +176,13 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+                
+        <!-- Temporal for Jakarta EE 10 development until the jar files are available on maven central -->
+        <repository>
+            <id>staged-jakarta-releases</id>
+            <url>https://jakarta.oss.sonatype.org/content/groups/staging/</url>
+        </repository>
+
     </repositories>
 
     <profiles>
