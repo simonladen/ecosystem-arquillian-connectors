@@ -5,7 +5,7 @@ name: Verify PR
 
 on:
   pull_request:
-    branches: [ master, Payara6, Payara4 ]
+    branches: [ master, Payara6, Payara4, Payara7 ]
     paths-ignore:
       - 'README.*'
       - '**/README.*'
@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         distribution: zulu
-        java-version: 11
+        java-version: 21
 
     - name: Cache repository
       uses: actions/cache@v2
