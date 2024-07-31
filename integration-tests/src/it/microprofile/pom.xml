@@ -315,6 +315,38 @@
     </profile>
 
     <profile>
+        <id>payara-server-remote</id>
+
+        <dependencies>
+            <dependency>
+                <groupId>fish.payara.arquillian</groupId>
+                <artifactId>payara-client-ee11</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- The actual Arquillian connector -->
+            <dependency>
+                <groupId>fish.payara.arquillian</groupId>
+                <artifactId>arquillian-payara-server-remote</artifactId>
+                <version>${project.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+        <build>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <systemPropertyVariables>
+                            <javaEEServer>payara-remote</javaEEServer>
+                        </systemPropertyVariables>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+
+    <profile>
       <id>payara-micro-remote</id>
       <dependencies>
           <dependency>
