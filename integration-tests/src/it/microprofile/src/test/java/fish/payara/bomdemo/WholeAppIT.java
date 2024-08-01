@@ -101,7 +101,7 @@ public class WholeAppIT {
 
     /* test commented out because of FISH-9114. Payara7 Alpha1 metrics response is in plain text, not Json
     @Test
-    public void metricMeasures() throws InterruptedException {
+    public void metricMeasures() {
         Client client = ClientBuilder.newClient();
         WebTarget metricEndpoint = client.target(baseUrl).path("data/metric");
 
